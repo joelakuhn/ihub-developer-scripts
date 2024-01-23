@@ -4,6 +4,11 @@ ENVIRONMENT=$1
 
 CREDS_DIR=~/creds
 
+if [ ! -d $CREDS_DIR ];
+then
+	CREDS_DIR=~/.creds
+fi
+
 CURL_ARGS="$CURL_ARGS"
 
 case $# in
