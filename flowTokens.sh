@@ -25,6 +25,12 @@ function usage() {
 command=$1
 creds_dir=$HOME/creds
 
+if [ ! -d $creds_dir ];
+then
+	creds_dir=~/.creds
+fi
+
+
 case $command in
 
     activate|a)
